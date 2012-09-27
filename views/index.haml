@@ -1,0 +1,60 @@
+!!!
+%html
+  %head
+    %style(type='text/css')
+      :plain
+        body { padding: 10px 0; font-family: Palatino, serif; }
+        article { margin: 0 auto; width: 840px; }
+        pre { overflow: auto; padding: 20px; background: #F0F8FF; }
+        pre a { color: #333; }
+        code { font-family: Monaco, monospace; }
+        section { margin: 0 0 28px 0; }
+        input { font-size: 24px; margin-bottom: 12px; font-family: Helvetica, sans-serif;}
+        input[type=text] {
+          width: 100%;
+        }
+        header { margin-bottom: 32px; border-bottom: 3px solid #FDF5E6; }
+        header h1 { letter-spacing: 3px; margin-bottom: 8px }
+        footer { border-top: 3px solid #FDF5E6; font-size: 14px; }
+        h1,h2 { font-weight: normal; margin: 0px 0 16px; }
+        h1 { font-size: 44px; }
+        h2 { font-size: 28px; }
+        a, a:link, a:visited { color: #4169E1}
+
+  %body
+    %article
+      %header
+        %h1 Tailbrain
+      %section
+        %h2 Try it
+        %form(method='get' action='generate')
+          %input(name='text' placeholder='Bit own finger eating french fries' type='text')
+          %br
+          %input(type='submit' value='Tailbrain')
+      %section
+        %h2 API
+        %pre
+          %code
+            http://tailbrain.herokuapp.com/generate?text=oops
+      %section
+        %h2 Examples
+        %div
+          %img(src="sample1.jpeg")
+          %img(src="sample2.jpeg")
+          %img(src="sample3.jpeg")
+          %img(src="sample4.jpeg")
+      %section
+        %h2 Why?
+        %a(href="http://en.wikipedia.org/wiki/Stegosaurus#Second_brain")
+          http://en.wikipedia.org/wiki/Stegosaurus#Second_brain
+      %footer
+        %p
+          %a(href="http://wesgibbs.me")<
+            Wes Gibbs
+          made this.
+          &copy; 2012
+        %p
+          Design borrowed with permission from Sandro Turriate's awesome
+          %a(href="http://starfleet-me.herokuapp.com")<
+            Starfleet-Me app
+          \.
